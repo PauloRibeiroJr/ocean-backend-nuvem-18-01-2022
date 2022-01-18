@@ -1,20 +1,23 @@
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 
-const url = "mongodb://localhost:27017";
+//const url = "mongodb://localhost:27017";
 // const url = "mongodb+srv://admin:hd2rV5duoPrrIi3t@cluster0.jup2c.mongodb.net/";
+const url = "mongodb+srv://adm:96188499@cluster0.a1dlo.mongodb.net";
 
-const dbName = "ocean_bancodados_18_01_2022";
+//const dbName = "ocean_bancodados_18_01_2022";
+const dbName = "ocean_bkend_20220118";
+
 
 async function main() {
     // Conexão com o Banco de Dados
-/*
+
     const client = await MongoClient.connect(url);
 
     const db = client.db(dbName);
 
     const collection = db.collection("herois");
-*/
+
     const collection = undefined;
     // Aplicação em Express
 
