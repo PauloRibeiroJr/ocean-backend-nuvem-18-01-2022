@@ -4,7 +4,7 @@ const { MongoClient, ObjectId } = require("mongodb");
 //const url = "mongodb://localhost:27017";
 // const url = "mongodb+srv://admin:hd2rV5duoPrrIi3t@cluster0.jup2c.mongodb.net/";
 //const url = "mongodb+srv://adm:96188499@cluster0.a1dlo.mongodb.net";
-const url = "mongodb+srv://"+process.env.PORT+":96188499@cluster0.a1dlo.mongodb.net";
+const url = "mongodb+srv://"+process.env.userMongoDb+":96188499@cluster0.a1dlo.mongodb.net";
 
 //const dbName = "ocean_bancodados_18_01_2022";
 const dbName = "ocean_bkend_20220118";
