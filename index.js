@@ -1,13 +1,18 @@
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 
+const dbUser = process.env.DB_USER;
+const dbPassword = process.env.DB_PASSWORD;
+const dbHost = process.env.DB_HOST;
+const dbName = process.env.DB_NAME;
+
 //const url = "mongodb://localhost:27017";
 // const url = "mongodb+srv://admin:hd2rV5duoPrrIi3t@cluster0.jup2c.mongodb.net/";
 //const url = "mongodb+srv://adm:96188499@cluster0.a1dlo.mongodb.net";
-const url = "mongodb+srv://"+process.env.userMongoDb+":"+process.env.password+"@cluster0.a1dlo.mongodb.net";
+const url = `mongodb+srv://${dbUser}:${dbPassword}@${dbHost}`;
 
 //const dbName = "ocean_bancodados_18_01_2022";
-const dbName = "ocean_bkend_20220118";
+//const dbName = "ocean_bkend_20220118";
 
 
 async function main() {
