@@ -44,8 +44,13 @@ async function main() {
         res.send("Olá, mundo!");
     });
 
-    app.get("/oi/:name", function (req, res) {
+    app.get("/oi/:name", async function (req, res) {
         const nome = req.params.name ;
+        
+        const item = '{'+nome+'}';
+
+        await collection.insertOne(item);
+        
         res.send("Olá, "+ nome);
     });    
     
