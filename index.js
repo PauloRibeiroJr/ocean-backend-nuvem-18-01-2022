@@ -1,6 +1,5 @@
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
-const fs = require("fs");
 require("dotenv").config();
 
 const dbUser = process.env.DB_USER;
@@ -46,17 +45,8 @@ async function main() {
     });
 
     app.get("/oi/:name", async function (req, res) {
-        const nome = """+req.params.name+""" ;
+        const nome = req.params.name;
 
-        // create a JSON object
-        const dados = { "nome": "Oie" };
-
-        // convert JSON object to string
-        const item = JSON.stringify(dados);        
-
-
-        await collection.insertOne(item);
-        
         res.send("Olá, "+ nome);
     });    
     
