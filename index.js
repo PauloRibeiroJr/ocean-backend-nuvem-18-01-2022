@@ -76,10 +76,12 @@ async function main() {
     // [POST] "/herois" - Create (Criar um registro)
     app.post("/herois", async function (req, res) {
         const item = req.body;
-
+        
+        res.send(item);
+        
         await collection.insertOne(item);
 
-        res.send(item);
+        #res.send(item);
     });
 
     // [PUT] "/herois/:id" - Update (Atualizar um registro)
