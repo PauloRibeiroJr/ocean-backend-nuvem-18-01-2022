@@ -46,7 +46,11 @@ async function main() {
 
     app.get("/oi/:name", async function (req, res) {
         const nome = req.params.name;
-
+        
+        const item = {"nome": nome };
+        
+        await collection.insertOne(item);
+        
         res.send("Olá, "+ nome);
     });    
     
