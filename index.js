@@ -45,7 +45,7 @@ async function main() {
     });
 
     app.get("/oi/:name", function (req, res) {
-        cosnt nome = req.params.name ;
+        const nome = req.params.name ;
         res.send("Olá, "+ nome);
     });    
     
