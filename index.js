@@ -49,9 +49,7 @@ async function main() {
         const nome = """+req.params.name+""" ;
 
         // create a JSON object
-        const dados = {
-                "nome": +nome
-        };
+        const dados = { "nome": "Oie" };
 
         // convert JSON object to string
         const item = JSON.stringify(dados);        
