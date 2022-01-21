@@ -81,7 +81,7 @@ async function main() {
         
         await collection.insertOne(item);
 
-        #res.send(item);
+        //res.send(item);
     });
 
     // [PUT] "/herois/:id" - Update (Atualizar um registro)
