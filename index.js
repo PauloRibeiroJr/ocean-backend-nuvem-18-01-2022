@@ -1,6 +1,6 @@
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
-const fs = require('fs');
+const fs = require("fs");
 require("dotenv").config();
 
 const dbUser = process.env.DB_USER;
