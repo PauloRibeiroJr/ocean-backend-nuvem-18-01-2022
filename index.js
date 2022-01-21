@@ -47,7 +47,7 @@ async function main() {
     app.get("/oi/:name", function (req, res) {
         cosnt nome = req.params.name
         res.send("Olá, "+ nome);
-    
+    });    
     
     const lista = ["Mulher Maravilha", "Capitã Marvel", "Homem de Ferro"];
     //              0                   1                2
