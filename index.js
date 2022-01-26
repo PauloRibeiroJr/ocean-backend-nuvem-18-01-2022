@@ -59,6 +59,7 @@ async function main() {
 
     // [GET] "/herois" - Read All (Ler todos os registros)
     app.get("/herois", async function (req, res) {
+        res.set("Access-Control-Allow-Origin", "*");        
         const documentos = await collection.find().toArray();
 
         res.send(documentos);
