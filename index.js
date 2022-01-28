@@ -70,13 +70,13 @@ async function main() {
 
   // [GET] "/herois" - Read All (Ler todos os registros)
   app.get("/herois", async function (req, res) {
-    if (
-      !req.headers.authorization ||
-      req.headers.authorization.indexOf("Basic ") === -1
-    ) {
-      return res.status(401).json({ message: "Missing Authorization Header" });
-    }
-    //res.set("Access-Control-Allow-Origin", "*");
+    // if (
+    //   !req.headers.authorization ||
+    //   req.headers.authorization.indexOf("Basic ") === -1
+    // ) {
+    //   return res.status(401).json({ message: "Missing Authorization Header" });
+    // }
+    res.set("Access-Control-Allow-Origin", "*");
     const documentos = await collection.find().toArray();
 
     res.send(documentos);
@@ -136,7 +136,7 @@ async function main() {
     next();
   });
 
-  app.listen(process.env.PORT || 3000);
+  app.listen(process.env.PORT || 3001);
 }
 
 main();
