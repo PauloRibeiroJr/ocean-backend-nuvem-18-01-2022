@@ -17,6 +17,8 @@ const url = `mongodb+srv://${dbUser}:${dbPassword}@${dbHost}`;
 //const dbName = "ocean_bkend_20220118";
 
 async function main() {
+  console.log("Iniciando ocean_bkend_20220118!")
+
   // Conexão com o Banco de Dados
 
   //const client = await MongoClient.connect(url);
