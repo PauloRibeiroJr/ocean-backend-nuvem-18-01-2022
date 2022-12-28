@@ -19,11 +19,11 @@ const url = `mongodb+srv://${dbUser}:${dbPassword}@${dbHost}`;
 async function main() {
   // Conexão com o Banco de Dados
 
-  const client = await MongoClient.connect(url);
+  //const client = await MongoClient.connect(url);
 
-  const db = client.db(dbName);
+  //const db = client.db(dbName);
 
-  const collection = db.collection("herois");
+  //const collection = db.collection("herois");
 
   //const collection = undefined;
 
